@@ -40,46 +40,37 @@ var Calculator = function() {
 
     };
 
-    this.getMultiplication = function (n1, n2) {
 
-        if ((typeof n1 != "number")&&(typeof n2 != "number"))
-        {
-            throw ('Invalid message');
-        }
+        this.getMultiplication = function(n1,n2){
 
-        if ((typeof n1 == "number") && (n2 == undefined)) {
+            if(typeof n1 == 'number' || n2 =='number')
+                return n1*n2;
 
-            res2 =  n1 * res2;
-            return res2;
-        }
-        if ((n1 != undefined) && (n2 != undefined)) {
+            if(typeof n1 == 'string' || n2 =='string')
+                throw('Invalid message')
 
-            res2 = n1 * n2;
-            return res2;
-        }
+            if(typeof n1 == 'number' || n2 =='string')
+                throw('Invalid message')
 
-    };
+            if(typeof n1 == 'string' || n2 =='number')
+                throw('Invalid message')
+        };
 
-    this.getDivide = function (n1, n2) {
-        if ((typeof n1 != "number") && (typeof n2 != "number"))
-        {
-            throw ('Invalid message');
-        }
-        if((n1 != 0) && ( n2 != 0)){
-            if ((n1 != undefined) && (n2 != undefined)) {
 
-                res2 = n1 / n2;
-                return res2;
-            }
-            if ((typeof n1 == "number") && (n2 == undefined)) {
 
-                res2 = res2/ n1;
-                return res2;
-            } else {
-                res2 = n2 / res2;
-                return res2;
-            }
-        }
+    this.getDivide = function(n1,n2){
+
+        if(typeof n1 == 'number' || n2 =='number')
+            return n1/n2;
+
+        if(typeof n1 == 'string' || n2 =='string')
+            throw('Invalid message')
+
+        if(typeof n1 == 'number' || n2 =='string')
+            throw('Invalid message')
+
+        if(typeof n1 == 'string' || n2 =='number')
+            throw('Invalid message')
     };
 };
 

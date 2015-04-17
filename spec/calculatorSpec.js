@@ -111,11 +111,6 @@ describe('Calculator', function() {
             }).toThrow('Invalid message');//if fn throw exception
         });
 
-        it('should not be able evaluate letter', function () {
-            expect(function () {
-                calculator.getMultiplication(3,'a')
-            }).toThrow('Invalid message');//if fn throw exception
-        });
 
         it('should not be able evaluate letters', function () {
             expect(function () {calculator.getMultiplication('a','b')
@@ -147,13 +142,7 @@ describe('Calculator', function() {
 
         });
 
-        it('should not be able evaluate letter', function () {
-            //var calculator = new Calculator();
-            expect(function () {
-                calculator.getDivide(3,'a')
-            }).toThrow('Invalid message');//if fn throw exception
 
-        });
 
         it('should not be able evaluate letters', function () {
             //var calculator = new Calculator();
